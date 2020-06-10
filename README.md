@@ -12,5 +12,5 @@ To read the Contacts
 node . --read:Contact
 ```
 
-[x] Set CREATE and READ
-[ ] Set UPDATE and DELETE
+- [x] Set CREATE and READ
+- [ ] Set UPDATE and DELETE
