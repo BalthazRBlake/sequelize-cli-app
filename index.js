@@ -13,9 +13,9 @@ const command = args[0].split(":")[0].substring(2);
 const entity = args[0].split(":")[1];
 
 switch(command) {
-  case CRUD.CREATE:
+  case CRUD.CREATE: // node .  --create:Contact --firstName=Blake --lastName=ElBarbaro
     const data = {};
-    //node .  --create:Contact --firstName=Blake --lastName=ElBarbaro
+
     args.slice(1).map(arg => {
       const temp = arg.split("=");
       data[temp[0].substring(2)] = temp[1];
@@ -24,11 +24,14 @@ switch(command) {
     db[entity]
       .create(data)
       .then(() => console.log("Contact created"))
-      .catch();
+      .catch(console.log);
     break;
 
-  case CRUD.READ:
-    console.log("READ")
+  case CRUD.READ: // node . --read:Contact
+    db[entity]
+      .findAll()
+      .then(console.log)
+      .catch(console.log);
     break;
 
   default:
