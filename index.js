@@ -14,7 +14,14 @@ const entity = args[0].split(":")[1];
 
 switch(command) {
   case CRUD.CREATE:
-    console.log("CREATED");
+    const data = {};
+    //node .  --create:Contact --firstName=Blake --lastName=ElBarbaro
+    args.slice(1).map(arg => {
+      const temp = arg.split("=");
+      data[temp[0].substring(2)] = temp[1];
+    });
+
+    console.log(data);
     break;
   case CRUD.READ:
     console.log("READ")
