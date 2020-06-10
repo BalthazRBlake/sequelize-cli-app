@@ -21,11 +21,16 @@ switch(command) {
       data[temp[0].substring(2)] = temp[1];
     });
 
-    console.log(data);
+    db[entity]
+      .create(data)
+      .then(() => console.log("Contact created"))
+      .catch();
     break;
+
   case CRUD.READ:
     console.log("READ")
     break;
+
   default:
     console.log("Operation not found!!!")
 }
