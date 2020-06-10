@@ -8,16 +8,16 @@ module.exports = {
         lastName: "ElBarbaro",
         phone: "01 800 200 200",
         email: "perroanciano@email.com",
-        createdAt: new Date().toDateString(),
-        updatedAt: new Date().toDateString()
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         firstName: "Persick",
         lastName: "TheFatasaurs",
         phone: "01 800 600 600",
         email: "gatogordo@email.com",
-        createdAt: new Date().toDateString(),
-        updatedAt: new Date().toDateString()
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },

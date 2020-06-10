@@ -13,7 +13,7 @@ const command = args[0].split(":")[0].substring(2);
 const entity = args[0].split(":")[1];
 
 switch(command) {
-  case CRUD.CREATE: // node .  --create:Contact --firstName=Blake --lastName=ElBarbaro
+  case CRUD.CREATE:
     const data = {};
 
     args.slice(1).map(arg => {
@@ -27,7 +27,7 @@ switch(command) {
       .catch(console.log);
     break;
 
-  case CRUD.READ: // node . --read:Contact
+  case CRUD.READ:
     db[entity]
       .findAll()
       .then(console.log)
